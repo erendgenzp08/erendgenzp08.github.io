@@ -1,0 +1,43 @@
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-SemiBold.woff2') format('woff2'),
+        url('RobotoSlab-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+:root {
+    --main-green: #70b34d;
+    --dark-teal: #263e43;
+    --footer-dark: #1e2f33;
+    --text-brown: #5c4731;
+    --bg-grey: #e9ecef;
+}
+
+body { font-family: 'Roboto Slab', serif; color: #333; }
+
+.title-underline::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--main-green);
+    margin: 15px 0;
+}
+
+.title-underline.mx-auto::after { margin: 15px auto; }
+
+.line-sm { width: 40px; height: 1px; background: #ccc; margin: 10px 0; }
