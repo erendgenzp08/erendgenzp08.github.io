@@ -68,7 +68,7 @@ body.products-page {
 }
 
 .highlight-quote {
-    border-left: 4px solid #E57373; /* Мягкий красный/коралловый цвет линии */
+    border-left: 4px solid #E57373; 
     padding-left: 1.5rem;
     color: #4A4A4A;
     font-size: 1rem;
