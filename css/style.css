@@ -1,0 +1,251 @@
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-SemiBold.woff2') format('woff2'),
+        url('RobotoSlab-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+:root {
+    --main-green: #70b34d;
+    --dark-teal: #263e43;
+    --footer-dark: #1e2f33;
+    --text-brown: #5c4731;
+    --bg-grey: #e9ecef;
+}
+
+body { font-family: 'Roboto Slab', serif; color: #333; }
+
+.title-underline::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--main-green);
+    margin: 15px 0;
+}
+
+body.products-page {
+    background-color: #FCF4F4; 
+    font-family: 'Roboto Slab', serif; 
+}
+
+.page-banner img {
+    display: block;
+}
+/* Стили для страницы продуктов (продолжение) */
+
+.page-title {
+    color: #3B4D5E; /* Темно-синий/серый цвет заголовка */
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+
+.title-dots span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.text-content p {
+    color: #4A4A4A;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* Стилизация цитаты с красной линией */
+.highlight-quote {
+    border-left: 4px solid #E57373; /* Мягкий красный/коралловый цвет линии */
+    padding-left: 1.5rem;
+    color: #4A4A4A;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-left: 0;
+}
+
+/* Стили для белого блока с 3 программами */
+.programs-box {
+    border-radius: 4px;
+}
+
+.program-title {
+    color: #3B4D5E;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    min-height: 48px; /* Выравниваем заголовки по высоте */
+}
+
+.program-hr {
+    border-top: 2px solid #3B4D5E; /* Темная полоска под заголовком */
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.program-text {
+    color: #4A4A4A;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+/* Стили для карточек продуктов */
+.product-card {
+    height: 100%; /* Чтобы карточки в одном ряду были одинаковой высоты */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Очень легкая тень, как на макете */
+}
+
+/* Картинки в карточках должны занимать всю ширину и быть одинаковых пропорций */
+.product-card img {
+    object-fit: cover;
+    aspect-ratio: 4/3; /* Задает одинаковые пропорции для всех фото, чтобы сетка не "прыгала" */
+}
+
+.product-title {
+    color: #55A65B; /* Зеленый цвет названия сорта */
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.product-desc {
+    color: #6C7A89; /* Сероватый цвет описания */
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+/* --- Стили для карточек продуктов с эффектами --- */
+
+/* --- Стили для карточек продуктов с плавным бесконечным покачиванием --- */
+
+/* 1. Базовые стили карточки */
+.product-card {
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Легкая тень в покое */
+    border-radius: 4px;
+    background-color: #fff;
+    
+    /* Плавность для подъема и изменения тени (0.4 секунды) */
+    transition: translate 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+/* Картинки внутри карточек */
+.product-card img {
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    display: block;
+}
+
+/* Стили текста */
+.product-title {
+    color: #55A65B;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+.product-desc {
+    color: #6C7A89;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* 2. Анимация бесконечного медленного покачивания */
+@keyframes slowRocking {
+    0%   { rotate: 0deg; }       /* Начинаем ровно */
+    25%  { rotate: 1.5deg; }     /* Плавно клонимся вправо (угол небольшой, чтобы было аккуратно) */
+    75%  { rotate: -1.5deg; }    /* Плавно клонимся влево */
+    100% { rotate: 0deg; }       /* Возвращаемся в центр для идеального зацикливания */
+}
+
+/* 3. Состояние при наведении (:hover) */
+.product-card:hover {
+    /* Эффект 1: Панелька плавно поднимается на 10px вверх */
+    translate: 0 -10px; 
+    
+    /* Тень становится более глубокой */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+    
+    /* Эффект 2: Запускаем покачивание 
+       3s - длительность одного цикла (очень медленно и плавно)
+       ease-in-out - мягкое ускорение и замедление
+       infinite - повторять бесконечно, пока мышь наведена
+    */
+    animation: slowRocking 3s ease-in-out infinite;
+}
+/* --- Стили для Подвала (Footer) --- */
+
+/* Основной темный фон */
+.site-footer {
+    background-color: #2C3E4A; /* Глубокий сине-серый цвет */
+    margin-top: 2rem;
+}
+
+/* Ссылки в навигации футера */
+.footer-links {
+    gap: 20px; /* Расстояние между ссылками */
+}
+
+.footer-links a {
+    color: #F8F9FA; /* Почти белый текст */
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #55A65B; /* При наведении текст становится фирменным зеленым */
+}
+
+/* Социальные иконки в кружочках */
+.footer-socials {
+    gap: 12px; /* Расстояние между иконками */
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #55A65B; /* Зеленая обводка */
+    border-radius: 50%; /* Делаем идеальный круг */
+    color: #55A65B; /* Зеленая иконка внутри */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на соцсети */
+.social-item:hover {
+    background-color: #55A65B; /* Кружок заливается зеленым */
+    color: #FFFFFF; /* Иконка становится белой */
+    text-decoration: none;
+}
+
+/* Полоса с копирайтом */
+.footer-copyright {
+    background-color: #23333D; /* Фон чуть темнее, чем у верхней части */
+}
+
+.footer-copyright p {
+    color: #8C9CA8; /* Приглушенный серый цвет для копирайта */
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+.title-underline.mx-auto::after { margin: 15px auto; }
+
+.line-sm { width: 40px; height: 1px; background: #ccc; margin: 10px 0; }
