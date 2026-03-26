@@ -1,0 +1,92 @@
+.hero-wrapper { 
+    background-size: cover; 
+    background-position: center; 
+    min-height: 550px; 
+    color: var(--text-brown);
+}
+
+.hero-content { padding-top: 120px; }
+.hero-content h1 { font-size: 44px; font-weight: 700; }
+
+.btn-main { 
+    background: var(--main-green); 
+    color: white; 
+    padding: 12px 30px; 
+    font-weight: 700; 
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.vision-mission-sec { 
+    background: var(--bg-grey) url('../images/Union.svg') no-repeat center;
+    background-size: cover;
+}
+
+.video-box { position: relative; cursor: pointer; display: inline-block; }
+.play-btn { 
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 65px; 
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.activities-sec {
+    background-color: #f4f5f7; 
+}
+
+.main-heading {
+    color: #2b4b4e; 
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+
+.title-separator span {
+    color: #4caf50;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.activity-title {
+    color: #4a8b4e; 
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.activity-hr {
+    width: 45px;
+    border-top: 3px solid #9ebc9f;
+    margin: 15px auto;
+}
+
+
+.activity-text {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.activity-hr {
+    width: 150px; 
+    border-top: 3px solid #9ebc9f; 
+    margin: 15px auto;
+}
+
+.activity-img {
+    height: 180px; 
+    object-fit: contain;
+}
+
+.title-separator span {
+    color: #4caf50;
+    letter-spacing: 5px; 
+    font-weight: bold;
+    font-size: 12px; 
+}
+img[src="images/3 1.png"] {
+    mix-blend-mode: multiply;
+}
+.video-box:hover .play-btn { transform: translate(-50%, -50%) scale(1.15); }
+
+.act-img { height: 75px; object-fit: contain; }
