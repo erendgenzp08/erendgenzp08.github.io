@@ -1,0 +1,153 @@
+/* =======================================================
+   RESPONSIVE.CSS (Один блок навігації)
+======================================================= */
+
+/* --- ЗАГАЛЬНІ ВИПРАВЛЕННЯ --- */
+.navbar-collapse {
+    flex-basis: auto;
+    flex-grow: 0;
+}
+
+.main-nav .nav-link {
+    font-weight: 700;
+    font-size: 14px;
+    color: #384e51 !important;
+    padding: 0 10px !important;
+    text-transform: uppercase;
+}
+
+/* --- ВЕЛИКІ ЕКРАНИ (1024px - 1280px) --- */
+@media (max-width: 1280px) {
+    .hero-content h1 { font-size: 38px; }
+}
+@media (max-width: 1024px) {
+    .hero-content h1 { font-size: 34px; }
+}
+
+/* --- ПК СТИЛІ (від 992px) --- */
+@media (min-width: 992px) {
+    .hero-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 80vh; 
+    }
+    .site-header {
+        position: absolute;
+        top: 0; left: 0; width: 100%;
+        z-index: 1000;
+        padding-top: 20px;
+    }
+    .hero-content {
+        flex-grow: 1;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+        margin-top: 0 !important;
+    }
+    .hero-content h1 {
+        font-size: 48px; max-width: 700px; margin-bottom: 30px;
+    }
+    .navbar-nav {
+        flex-direction: row !important;
+        flex-wrap: nowrap; 
+    }
+    .nav-link-custom {
+        white-space: nowrap;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        font-size: 18px !important;
+    }
+    /* Пошук на ПК */
+    .header-search {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #4a5a64;
+        width: 250px; 
+        justify-content: space-between;
+    }
+    .header-search input {
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+    .search-box button { background: none; border: none; padding: 0; }
+}
+
+/* --- ПЛАНШЕТИ ТА МОБІЛКИ (до 991px) --- */
+@media (max-width: 991px) {
+    .hero-wrapper { padding-top: 20px; }
+    
+    .navbar {
+        display: flex; justify-content: center; 
+    }
+    .navbar-brand { margin: 0 auto !important; }
+    
+    .navbar-toggler {
+        position: absolute; right: 0; top: 5px; 
+        z-index: 1002;
+    }
+    
+    /* Випадаюче меню */
+    .navbar-collapse {
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: #fff; z-index: 1001;
+        padding: 15px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        align-items: center !important; 
+    }
+    
+    .search-box {
+        display: flex; justify-content: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px 10px;
+        max-width: 250px; margin: 0 auto 15px auto;
+    }
+    .search-box input { border: none; outline: none; }
+    .search-box button img { filter: invert(100%); } 
+}
+
+/* --- МОБІЛЬНІ ТЕЛЕФОНИ (до 767px) --- */
+@media (max-width: 767px) {
+    .hero-wrapper {
+        min-height: 80vh !important;
+        display: flex !important; flex-direction: column !important;
+        justify-content: flex-start !important; align-items: center !important;
+    }
+    .hero-content {
+        margin-top: 20px !important; display: flex; flex-direction: column;
+        align-items: center; text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 26px !important; color: #384e51 !important;
+        font-weight: 700 !important; line-height: 1.2 !important;
+        margin-bottom: 25px !important; max-width: 280px; 
+    }
+    .btn-main {
+        background-color: #70b34d !important; color: #fff !important;
+        padding: 12px 35px !important; font-size: 14px !important;
+        font-weight: bold; border-radius: 0 !important; display: inline-block;
+    }
+    
+    /* Секції та Футер для мобайл */
+    .vision-mission-sec h2 { font-size: 24px; text-align: center; }
+    .title-underline::after { left: 50%; transform: translateX(-50%); }
+    .vision-mission-sec p { text-align: center; }
+    
+    .activities-main-title { font-size: 22px; }
+    .bg-white .col-md-4 { margin-bottom: 40px; }
+    
+    .footer-main { flex-direction: column; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px; }
+    .footer-socials { justify-content: center; width: 100%; }
+}
+
+/* --- МАЛІ ЕКРАНИ (480px та нижче) --- */
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 24px !important; }
+    .act-title { font-size: 18px; }
+    .footer-links a { font-size: 11px; padding: 0 5px; }
+}
+
+@media (max-width: 320px) {
+    .hero-content h1 { font-size: 20px !important; }
+}
