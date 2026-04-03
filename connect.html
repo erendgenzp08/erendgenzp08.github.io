@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Agridera</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css"> 
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="contact-page d-flex flex-column min-vh-100">
+
+    <header class="site-header bg-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-8 col-md-3">
+                    <a href="index.html">
+                        <img src="images/Logo.svg" alt="Agridera Logo" class="main-logo">
+                    </a>
+                </div>
+                
+                <div class="col-4 d-md-none text-right">
+                    <button class="btn" type="button" data-toggle="collapse" data-target="#mobileMenu" style="font-size: 24px; padding: 0; color: #344D5E;">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-9 collapse d-md-block mt-3 mt-md-0" id="mobileMenu">
+                    <div class="d-flex justify-content-md-end justify-content-center mb-3 mb-md-2">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search">
+                            <button type="submit"><img src="images/ico_search.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="nav justify-content-md-end flex-column flex-md-row text-center">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Company Profile</a></li>
+                            <li class="nav-item"><a href="tomato.html" class="nav-link">Products</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">R & D</a></li>
+                            <li class="nav-item"><a href="connect.html" class="nav-link text-success font-weight-bold pr-0">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <img src="images/image 7.svg" alt="Contact Us Banner" class="img-fluid w-100" style="object-fit: cover; max-height: 400px;">
+    </section>
+
+    <main class="main-content flex-grow-1 d-flex flex-column">
+        
+        <section class="py-5" style="background-color: #EBEBEB;">
+            <div class="container">
+                
+                <div class="row mb-4">
+                    <div class="col-12 text-center text-md-left">
+                        <h1 class="contact-title" style="color: #344D5E; font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">Contact us</h1>
+                        <div class="title-separator mb-4" style="color: #55A65B; font-weight: bold; letter-spacing: 5px;">
+                            <span>x x x x x</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="#" method="POST" class="contact-form">
+                    <div class="row">
+                        
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" class="form-control custom-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" class="form-control custom-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="position">Position</label>
+                                <input type="text" id="position" name="position" class="form-control custom-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" class="form-control custom-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" class="form-control custom-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telephone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control custom-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control custom-input" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-5 offset-lg-2 mt-4 mt-md-0">
+                            <div class="form-group">
+                                <label for="role">You are a</label>
+                                <select id="role" name="role" class="form-control custom-input">
+                                    <option>seed producer</option>
+                                    <option>distributor</option>
+                                    <option>other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="other_role">If other, please specify</label>
+                                <input type="text" id="other_role" name="other_role" class="form-control custom-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">You are interested in</label>
+                                <textarea id="message" name="message" class="form-control custom-input" rows="8"></textarea>
+                            </div>
+                            
+                            <div class="form-group mt-4">
+                                <label for="captcha">Please type this code</label>
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <div class="mr-3 mb-2" style="font-family: 'Courier New', Courier, monospace; font-size: 1.2rem; font-style: italic; letter-spacing: 3px; background: #fff; padding: 5px 15px; border-radius: 5px; border: 1px dashed #ccc; color: #344D5E;">
+                                        7 C J 5
+                                    </div>
+                                    <input type="text" id="captcha" name="captcha" class="form-control custom-input mb-2 mr-3" style="width: 100px;">
+                                    <button type="submit" class="btn submit-btn mb-2">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white flex-grow-1 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="d-inline-block position-relative mb-4">
+                            <h4 style="color: #55A65B; font-weight: 700; font-size: 1.1rem; margin: 0; padding: 12px 0;">Our Address</h4>
+                            <div style="position: absolute; top: 0; left: -30px; right: -30px; height: 1px; background-color: #A5C9A7;"></div>
+                            <div style="position: absolute; bottom: 0; left: -30px; right: -30px; height: 1px; background-color: #A5C9A7;"></div>
+                        </div>
+                        <p style="color: #344D5E; line-height: 1.6; font-size: 0.95rem; margin-bottom: 0;">
+                            <strong>AGRIDERA Seeds & Agriculture Ltd.</strong><br>
+                            P.O Box 103,<br>
+                            Gedera 70750, Israel.<br>
+                            Telephone: <span style="color: #55A65B;">+972 8 944 9222</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+                        <nav class="footer-links d-flex flex-wrap">
+                            <a href="#">PROFILE</a>
+                            <a href="#">MANAGEMENT</a>
+                            <a href="#">PRODUCTS</a>
+                            <a href="#">R&D</a>
+                            <a href="#">LINKS</a>
+                            <a href="#">SITEMAP</a>
+                            <a href="#">CONTACT</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-socials d-flex justify-content-center justify-content-md-end">
+                            <a href="#" class="social-item"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-item"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-item no-border">
+                                <img src="images/Ico_tube.svg" alt="YouTube" class="custom-social-icon"> 
+                            </a>
+                            <a href="#" class="social-item"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-item"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom py-3">
+            <div class="container text-center">
+                <p class="copyright-text m-0">AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
